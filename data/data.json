@@ -1,0 +1,32 @@
+{
+  "defects": [
+    {
+      "code": "001",
+      "defect": "production fell",
+      "title_work": "determining the cause",
+      "unit_of_work": "developer nerves",
+      "headcount": 8
+    },
+    {
+      "code": "002",
+      "defects": "cracked glass",
+      "title_work": "glass replacement",
+      "unit_of_work": "pieces",
+      "headcount": 1
+    }
+  ],
+  "employees": [
+    {
+      "employee_id": 1 ,
+      "first_name": "Max",
+      "last_name": "Amaryan",
+      "sheets_sent": 5
+    },
+    {
+      "employee_id": 2 ,
+      "first_name": "Alex",
+      "last_name": "Kamaryan",
+      "sheets_sent": 3
+    }
+  ]
+}
