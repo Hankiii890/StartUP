@@ -1,13 +1,16 @@
 from sqlalchemy.orm import Mapped
 from sqlalchemy.orm import DeclarativeBase
 from sqlalchemy.orm import mapped_column
-from sqlalchemy.orm import Session
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
 from sqlalchemy import String
 
+from dotenv import load_dotenv
+import os
 
-DATABASE_URL = "postgresql://postgres:1234321@localhost/company"
+load_dotenv()
+DATABASE_URL = os.getenv("DATABASE_URL")
+
 
 engine = create_engine(DATABASE_URL, echo=True)
 

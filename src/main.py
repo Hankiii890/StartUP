@@ -4,15 +4,26 @@ from src.models import Defects, Employees
 from src.models import session
 
 
-def create_defects(code, defect, title, unit, headcount):
-    tb_defect = Defects(code=code, defect=defect, title_work=title, unit_of_work=unit, headcount=headcount)
+def create_defects(**kwargs):
+    tb_defect = Defects(
+        code=kwargs['code'],
+        defect=kwargs['defect'],
+        title_work=kwargs['title_work'],
+        unit_of_work=kwargs['unit_of_work'],
+        headcount=kwargs['headcount']
+    )
     session.add(tb_defect)
     session.commit()
     return tb_defect
 
 
-def create_employees(empl_id, first_name, last_name, sheets_sent):
-    tb_employees = Employees(employee_id=empl_id, first_name=first_name, last_name=last_name, sheets_sent=sheets_sent)
+def create_employees(**kwargs):
+    tb_employees = Employees(
+        employee_id=kwargs['employee_id'],
+        first_name=kwargs['first_name'],
+        last_name=kwargs['last_name'],
+        sheets_sent=kwargs['sheets_sent']
+    )
     session.add(tb_employees)
     session.commit()
     return tb_employees
