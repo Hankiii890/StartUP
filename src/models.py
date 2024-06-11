@@ -4,14 +4,11 @@ from sqlalchemy.orm import mapped_column
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
 from sqlalchemy import String
-
 from dotenv import load_dotenv
 import os
 
 load_dotenv()
 DATABASE_URL = os.getenv("DATABASE_URL")
-
-
 engine = create_engine(DATABASE_URL, echo=True)
 
 
