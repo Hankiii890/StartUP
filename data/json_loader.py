@@ -1,4 +1,5 @@
 import json
+
 from src.models import Defects, Employees, session
 from src.main import create_defects, create_employees
 
@@ -10,8 +11,9 @@ with open('data.json', 'r') as f:
 
 # Добавление данных в таблицы
 for defect_data in result["defects"]:
+    print(defect_data)
     """Создание записей"""
-    create_defects(session, Defects, **defect_data)
+    create_defects(**defect_data)
 
 for employees_data in result["employees"]:
-    create_employees(session, Employees, **employees_data)
+    create_employees(**employees_data)

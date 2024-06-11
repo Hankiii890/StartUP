@@ -9,7 +9,7 @@
     },
     {
       "code": "002",
-      "defects": "cracked glass",
+      "defect": "cracked glass",
       "title_work": "glass replacement",
       "unit_of_work": "pieces",
       "headcount": 1
