@@ -1,5 +1,5 @@
 import psycopg2
-
+import os
 
 def connect():
     """Проверка соединения с БД"""
@@ -8,7 +8,7 @@ def connect():
         conn = psycopg2.connect(
             dbname="company",
             user="postgres",
-            password="1234321",
+            password="password",
             host="localhost"
         )
         print("Connecting to the PostgreSQL database...")
